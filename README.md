@@ -43,7 +43,7 @@ El objetivo es aplicar conceptos fundamentales de desarrollo frontend como:
 ## Maquetacion Del Proyecto
 
 - Pàgina principal:
-![alt text](image.png)
+![alt text](./estilos/media/image.png)
 
 
 - [Haga click aquì para ver la maquetaciòn funcional](https://sites.google.com/view/star-wars-la-pelicula/inicio)
