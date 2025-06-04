@@ -89,7 +89,7 @@ proyecto-star-wars/
 
 Desarrollado por:
 
- Juan_Camilo_Rojas_Arenas
+ Juan Camilo Rojas Arenas
 
  Juan Sebastian Gualdron Gallo
 
