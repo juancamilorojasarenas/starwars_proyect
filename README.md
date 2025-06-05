@@ -43,7 +43,7 @@ El objetivo es aplicar conceptos fundamentales de desarrollo frontend como:
 ## Maquetacion Del Proyecto
 
 - Pàgina principal:
-![alt text](./estilos/media/image.png)
+![alt text](./media/image.png)
 
 
 - [Haga click aquì para ver la maquetaciòn funcional](https://sites.google.com/view/star-wars-la-pelicula/inicio)
@@ -69,8 +69,15 @@ proyecto-star-wars/
 
 
 ### Menú principal (ejecutado desde `main.js`)
-1. Pàgina de inicio
-2. 
+1. Página de inicio con introducción temática
+
+2. Búsqueda de personajes, planetas, vehículos, etc.
+
+3. Visualización detallada de cada elemento seleccionado
+
+4. Navegación fluida entre categorías
+
+
 ---
 
 
