@@ -1,20 +1,118 @@
-body {
+* {
     margin: 0;
-    overflow: hidden;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-img {
-    width: 100%;
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+    position: relative;
     height: 100vh;
-    object-fit: cover;
+    width: 100%;
+    color: #fff;
+    background-color: #000; 
+    color: #fff;
 }
+
+
 
 video {
-    display: none;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     object-fit: cover;
+    z-index: -1;
+    display: none; 
+    opacity: 0.6;
 }
+
+img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+
+.contenido {
+    position: relative;
+    z-index: 1;
+    padding: 2rem;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+h1 {
+    font-size: 3rem;
+    text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00;
+    margin-bottom: 1rem;
+}
+
+.busqueda-combinada {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    margin-top: 1rem;
+    border: 2px solid #ffcc00;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.busqueda-combinada .filtro {
+    background-color: transparent;
+    color: #ffcc00;
+    border: none;
+    padding: 1rem 1.2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    appearance: none;
+    width: auto;
+}
+
+.busqueda-combinada .boton {
+    background-color: #ffcc00;
+    color: #000;
+    border: none;
+    padding: 1rem 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1rem;
+}
+
+.busqueda-combinada .boton:hover {
+    background-color: #ffe066;
+}
+
+video, img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+    transition: opacity 0.1s linear;
+    background-color: #000; 
+}
+
+
+img {
+    z-index: 1;
+    opacity: 1;
+}
+
+video {
+    z-index: 0;
+    opacity: 0;
+}
+

@@ -1,23 +1,44 @@
-// main.js
-
 document.addEventListener('DOMContentLoaded', () => {
     const video = document.querySelector('video');
     const img = document.querySelector('img');
 
-    // Función para mostrar el video y reproducirlo
-    function showAndPlayVideo() {
-        if (img) img.style.display = 'none';       // Ocultamos la imagen
-        if (video) {
-            video.style.display = 'block';         // Mostramos el video           // Opcional: silenciar para autoplay
-            video.play().catch(error => {
-                console.error("Error al intentar reproducir el video:", error);
-            });
-        }
-    }
+    let scrollTotal = 0;
+    const maxScroll = 300;
 
-    document.addEventListener('mousemove', (event) => {
-        if (video.style.display !== 'block') {
-            showAndPlayVideo();
+    video.style.opacity = '0';
+    img.style.opacity = '1';
+    video.muted = true;
+    video.loop = true;
+    video.style.display = 'block'; // 🔥 fuerza que esté visible
+
+    document.addEventListener('wheel', (e) => {
+        scrollTotal += e.deltaY;
+
+        if (scrollTotal < 0) scrollTotal = 0;
+        if (scrollTotal > maxScroll) scrollTotal = maxScroll;
+
+        const porcentaje = scrollTotal / maxScroll;
+        img.style.opacity = 1 - porcentaje;
+        video.style.opacity = porcentaje;
+
+        if (porcentaje >= 1) {
+            video.style.zIndex = 1;
+            img.style.zIndex = 0;
+            video.play().catch(err => console.error("Error reproduciendo video:", err));
+        } else if (porcentaje <= 0) {
+            video.style.zIndex = 0;
+            img.style.zIndex = 1;
+            video.pause();
+        } else {
+            video.style.zIndex = 1;
+            img.style.zIndex = 1;
+            video.play().catch(() => {});
         }
     });
+});
+
+document.querySelector('.busqueda-combinada').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const filtro = document.querySelector('.filtro').value;
+    console.log("Buscar categoría:", filtro);
 });
