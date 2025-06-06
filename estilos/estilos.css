@@ -56,63 +56,73 @@ h1 {
 }
 
 .busqueda-combinada {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0;
-    margin-top: 1rem;
-    border: 2px solid #ffcc00;
-    border-radius: 8px;
-    overflow: hidden;
-    background-color: #000;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  background-color: #111;
+  border: 2px solid #ffcc00;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 90%;
+  max-width: 400px;
+  margin: 1rem auto;
+  box-shadow: 0 0 10px #ffcc0055;
 }
 
 .busqueda-combinada .filtro {
-    background-color: transparent;
-    color: #ffcc00;
-    border: none;
-    padding: 1rem 1.2rem;
-    font-size: 1rem;
-    cursor: pointer;
-    appearance: none;
-    width: auto;
+  flex: 1;
+  padding: 0.8rem 1rem;
+  border: none;
+  background: #000;
+  color: #ffcc00;
+  font-size: 1rem;
+  text-align: center;
+  appearance: none;
 }
 
 .busqueda-combinada .boton {
-    background-color: #ffcc00;
-    color: #000;
-    border: none;
-    padding: 1rem 1.5rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-size: 1rem;
+  flex: 0 0 auto;
+  background-color: #ffcc00;
+  color: #000;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.busqueda-combinada .boton:hover {
+@media (hover: hover) {
+  .busqueda-combinada .boton:hover {
     background-color: #ffe066;
+  }
 }
 
-video, img {
-    position: fixed;
-    top: 0;
-    left: 0;
+@media (max-width: 400px) {
+  .busqueda-combinada {
+    flex-direction: column;
+    padding: 0.5rem;
+  }
+
+  .busqueda-combinada .filtro,
+  .busqueda-combinada .boton {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    pointer-events: none;
-    transition: opacity 0.1s linear;
-    background-color: #000; 
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
 }
 
+@media (max-width: 200px) {
+  .busqueda-combinada {
+    border-width: 1px;
+    box-shadow: none;
+  }
 
-img {
-    z-index: 1;
-    opacity: 1;
+  .busqueda-combinada .filtro,
+  .busqueda-combinada .boton {
+    font-size: 0.7rem;
+    padding: 0.4rem;
+  }
 }
-
-video {
-    z-index: 0;
-    opacity: 0;
-}
-

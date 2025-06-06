@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     img.style.opacity = '1';
     video.muted = true;
     video.loop = true;
-    video.style.display = 'block'; // 🔥 fuerza que esté visible
+    video.style.display = 'block'; 
 
     document.addEventListener('wheel', (e) => {
         scrollTotal += e.deltaY;
