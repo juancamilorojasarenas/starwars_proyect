@@ -170,7 +170,7 @@ img{
     background-position: center;    
     background-repeat: no-repeat;
   }
-
+}
 
 .busqueda-combinada {
   display: flex; 
@@ -194,7 +194,5 @@ img{
 .boton {
   padding: 5px 10px; 
   font-size: 20px; 
-  te
-  height: 30px; 
-}
+  height: 40px; 
 }
