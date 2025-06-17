@@ -252,14 +252,14 @@ class StarWarsInterface {
 
     getCategoryIcon() {
         const icons = {
-            people: '👤',
-            planets: '🪐',
-            starships: '🚀',
-            vehicles: '🚗',
-            species: '🧬',
-            films: '🎬'
+            people: '',
+            planets: '',
+            starships: '',
+            vehicles: '',
+            species: '',
+            films: ''
         };
-        return icons[this.currentCategory] || '📊';
+        return icons[this.currentCategory] || '';
     }
 
     getItemId(item) {
@@ -419,8 +419,8 @@ class StarWarsInterface {
                 <div class="loading-spinner"></div>
                 <p>Accediendo a los archivos imperiales...</p>
                 <div style="margin-top: 1rem; opacity: 0.7; font-size: 0.9rem;">
-                    <p>🔄 Conectando con SWAPI</p>
-                    <p>📡 Descargando datos de ${this.currentCategory}</p>
+                    <p> Conectando con SWAPI</p>
+                    <p> Descargando datos de ${this.currentCategory}</p>
                 </div>
             </div>
         `;
@@ -442,12 +442,12 @@ class StarWarsInterface {
                         cursor: pointer;
                         text-transform: uppercase;
                     ">
-                        🔄 REINTENTAR CONEXIÓN
+                         REINTENTAR CONEXIÓN
                     </button>
                 </div>
                 <div style="margin-top: 1rem; opacity: 0.7; font-size: 0.9rem;">
-                    <p>💡 Verifica tu conexión a internet</p>
-                    <p>🛰️ Los servidores SWAPI pueden estar temporalmente inactivos</p>
+                    <p> Verifica tu conexión a internet</p>
+                    <p> Los servidores SWAPI pueden estar temporalmente inactivos</p>
                 </div>
             </div>
         `;

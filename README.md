@@ -27,26 +27,17 @@ El objetivo es aplicar conceptos fundamentales de desarrollo frontend como:
 ## 🔧 Tecnologías Utilizadas
 
 - 💻 **HTML5**
-- 🎨 **CSS3 / SASS / Bootstrap (opcional)**
-- ⚡ **JavaScript (ES6+)**
-- 🌐 **Fetch API** para consumo de datos externos
-
----
-
-## 📚 Recursos Usados
-
-- [Personajes](https://es.wikipedia.org/wiki/Anexo:Personajes_de_Star_Wars) 
-- 🖼️ Assets visuales: iconos, fuentes, imágenes (si aplica)
+- 🎨 **CSS3**
+- ⚡ **JavaScript**
+- 🌐 **Fetch API** 
 
 ---
 
 ## Maquetacion Del Proyecto
 
 - Pàgina principal:
-![alt text](./media/image.png)
-
-
-- [Haga click aquì para ver la maquetaciòn funcional](https://sites.google.com/view/star-wars-la-pelicula/inicio)
+![alt text](./media/maque.jpeg)
+nota: la maquetacion no esta funcional
 ---
 
 

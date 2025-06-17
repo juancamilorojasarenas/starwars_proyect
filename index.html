@@ -3,96 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Base de Datos Imperial - Star Wars</title>
+    <title>Base de Datos Imperial</title>
     <link rel="stylesheet" href="./estilos/estilos.css">
 </head>
 <body>
-    <!-- Fondo de estrellas -->
     <div class="stars" id="stars"></div>
     <div class="background-grid"></div>
-
-    <!-- Header Imperial -->
+    
     <header class="header">
         <div class="header-content">
-            <h1 class="logo">⭐ BASE DE DATOS IMPERIAL</h1>
+            <h1 class="logo">BASE DE DATOS IMPERIAL</h1>
             <div class="system-status">
                 <div class="status-indicator">
-                    <div class="status-dot"></div>
+                    <span class="status-dot"></span>
                     <span>SWAPI CONECTADO</span>
                 </div>
                 <div class="status-indicator">
+                    <span class="status-dot"></span>
                     <span>SECTOR: OUTER RIM</span>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- Contenido principal -->
-    <div class="main-container">
-        <!-- Sidebar de navegación -->
+    <main class="main-container">
         <aside class="sidebar">
             <h2 class="sidebar-title">ARCHIVOS IMPERIALES</h2>
-            <nav>
-                <ul class="nav-menu">
-                    <li class="nav-item">
-                        <button class="nav-button active" data-category="people">
-                            👤 PERSONAJES
-                        </button>
-                    </li>
-                    <li class="nav-item">
-                        <button class="nav-button" data-category="planets">
-                            🪐 PLANETAS
-                        </button>
-                    </li>
-                    <li class="nav-item">
-                        <button class="nav-button" data-category="starships">
-                            🚀 NAVES
-                        </button>
-                    </li>
-                    <li class="nav-item">
-                        <button class="nav-button" data-category="vehicles">
-                            🚗 VEHÍCULOS
-                        </button>
-                    </li>
-                    <li class="nav-item">
-                        <button class="nav-button" data-category="species">
-                            🧬 ESPECIES
-                        </button>
-                    </li>
-                    <li class="nav-item">
-                        <button class="nav-button" data-category="films">
-                            🎬 PELÍCULAS
-                        </button>
-                    </li>
-                </ul>
-            </nav>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <button class="nav-button active" data-category="people">PERSONAJES</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-button" data-category="planets">PLANETAS</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-button" data-category="starships">NAVES</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-button" data-category="vehicles">VEHÍCULOS</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-button" data-category="species">ESPECIES</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-button" data-category="films">PELÍCULAS</button>
+                </li>
+            </ul>
         </aside>
 
-        <!-- Área de contenido -->
-        <main class="content-area">
+        <section class="content-area">
             <div class="content-header">
                 <h2 class="content-title" id="contentTitle">PERSONAJES</h2>
                 <div class="search-container">
-                    <input type="text" class="search-input" id="searchInput" placeholder="Buscar en archivos imperiales...">
+                    <input type="text" class="search-input" id="searchInput" placeholder="BUSCAR">
                     <button class="search-button" id="searchButton">BUSCAR</button>
                 </div>
             </div>
 
-            <div id="contentContainer">
+            <div class="content-container" id="contentContainer">
                 <div class="loading">
                     <div class="loading-spinner"></div>
                     <p>Accediendo a los archivos imperiales...</p>
                 </div>
             </div>
 
-            <div class="pagination" id="pagination" style="display: none;">
+            <div class="pagination" id="pagination">
                 <button id="prevPage">ANTERIOR</button>
-                <span class="current-page" id="currentPage">1</span>
+                <span id="currentPage">1</span>
                 <button id="nextPage">SIGUIENTE</button>
             </div>
-        </main>
-    </div>
+        </section>
+    </main>
+
     <script src="./funcionalidad/main.js"></script>
 </body>
 </html>
-        
